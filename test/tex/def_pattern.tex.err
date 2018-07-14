@@ -1,0 +1,6 @@
+
+Error at "source" (line 5, column 12):
+unexpected Tok "source" (line 5, column 12) (Arg 2) "#2"
+expecting end of input
+\def\Sec#1[#2]#3{%
+           ^
