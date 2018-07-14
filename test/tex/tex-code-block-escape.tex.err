@@ -1,0 +1,6 @@
+
+Error at "source" (line 4, column 9):
+unexpected _
+expecting \end{codeblock}
+std::for_each(std::execution::par, std::begin(a), std::end(a), [&](int i) {
+        ^
