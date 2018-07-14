@@ -1,0 +1,14 @@
+\newcommand{\CodeStylex}[1]{\texttt{#1}}
+\newcommand{\CodeBlockSetup}{%
+\lstset{escapechar=@, aboveskip=\parskip, belowskip=0pt,
+        midpenalty=500, endpenalty=-50,
+        emptylinepenalty=-250, semicolonpenalty=0}%
+\renewcommand{\tcode}[1]{\textup{\CodeStylex{##1}}}%
+\renewcommand{\term}[1]{\textit{##1}}%
+\renewcommand{\grammarterm}[1]{\gterm{##1}}%
+}
+
+\renewenvironment{codeblock}{\begin{verbatim}}{\end{verbatim}}
+\begin{codeblock}
+std::for_each
+\end{codeblock}
