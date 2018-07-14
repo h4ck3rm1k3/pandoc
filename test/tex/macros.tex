@@ -1,0 +1,37 @@
+
+ %%--------------------------------------------------
+ %% Grammar extraction.
+\def\gramSec[#1]#2{}
+ 
+ 
+\def\indexescape#1{\doindexescape#1\stopindexescape!\doneindexescape}
+\def\doindexescape#1!{#1"!\doindexescape}
+
+\def\Sec#1[#2]#3{%
+\ifcase#1\let\s=\chapter\let\l=\clauselabel
+      \or\let\s=\section\let\l=\label
+      \or\let\s=\subsection\let\l=\label
+      \or\let\s=\subsubsection\let\l=\label
+      \or\let\s=\paragraph\let\l=\label
+      \or\let\s=\subparagraph\let\l=\label
+      \fi%
+\s[#3]{#3\hfill[#2]}\l{#2}\addxref{#2}}
+ 
+
+\def\rSec#1[#2]#3{%
+\setcounter{SectionDepth}{#1}
+\addtocounter{SectionDepth}{\value{SectionDepthBase}}
+\Sec{\arabic{SectionDepth}}[#2]{#3}}
+ 
+\newcommand{\CodeBlockSetup}{%
+\lstset{escapechar=@, aboveskip=\parskip, belowskip=0pt,
+        midpenalty=500, endpenalty=-50,
+        emptylinepenalty=-250, semicolonpenalty=0}%
+\renewcommand{\tcode}[1]{\textup{\CodeStylex{##1}}}%
+\renewcommand{\term}[1]{\textit{##1}}%
+\renewcommand{\grammarterm}[1]{\gterm{##1}}%
+}
+ 
+ 
+\let\ncsimplebnf\simplebnf
+\let\ncbnf\bnf

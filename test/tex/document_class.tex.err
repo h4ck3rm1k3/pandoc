@@ -1,0 +1,5 @@
+
+Error at "source" (line 1, column 15):
+unexpected [
+\documentclass[a4paper,10pt,oneside,openany,final]{memoir}
+              ^

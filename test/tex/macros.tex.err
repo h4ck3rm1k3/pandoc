@@ -1,0 +1,6 @@
+
+Error at "source" (line 4, column 14):
+unexpected Tok "source" (line 4, column 14) (Arg 1) "#1"
+expecting end of input
+\def\gramSec[#1]#2{}
+             ^
